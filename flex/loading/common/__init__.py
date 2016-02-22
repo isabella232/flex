@@ -47,6 +47,9 @@ from .unique_items import (
 from .enum import (
     enum_validator,
 )
+from .all_of import (
+    all_of_validator,
+)
 
 
 field_validators = ValidationDict()
@@ -63,6 +66,7 @@ field_validators.add_property_validator('minItems', min_items_validator)
 field_validators.add_property_validator('maxItems', max_items_validator)
 field_validators.add_property_validator('uniqueItems', unique_items_validator)
 field_validators.add_property_validator('enum', enum_validator)
+field_validators.add_property_validator('allOf', all_of_validator)
 
 
 non_field_validators = ValidationDict()
